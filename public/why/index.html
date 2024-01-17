@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html >
+<head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Travel Show Marketing Group</title>
+<style id="vuetify-theme-stylesheet">:root {
+      --v-theme-background: 255,255,255;
+      --v-theme-background-overlay-multiplier: 1;
+      --v-theme-surface: 255,255,255;
+      --v-theme-surface-overlay-multiplier: 1;
+      --v-theme-surface-variant: 66,66,66;
+      --v-theme-surface-variant-overlay-multiplier: 2;
+      --v-theme-on-surface-variant: 238,238,238;
+      --v-theme-primary: 0,91,144;
+      --v-theme-primary-overlay-multiplier: 2;
+      --v-theme-primary-darken-1: 55,0,179;
+      --v-theme-primary-darken-1-overlay-multiplier: 2;
+      --v-theme-secondary: 112,173,204;
+      --v-theme-secondary-overlay-multiplier: 1;
+      --v-theme-secondary-darken-1: 1,135,134;
+      --v-theme-secondary-darken-1-overlay-multiplier: 1;
+      --v-theme-error: 176,0,32;
+      --v-theme-error-overlay-multiplier: 2;
+      --v-theme-info: 33,150,243;
+      --v-theme-info-overlay-multiplier: 1;
+      --v-theme-success: 76,175,80;
+      --v-theme-success-overlay-multiplier: 1;
+      --v-theme-warning: 251,140,0;
+      --v-theme-warning-overlay-multiplier: 1;
+      --v-theme-tertiary: 95,95,95;
+      --v-theme-tertiary-overlay-multiplier: 2;
+      --v-theme-on-background: 0,0,0;
+      --v-theme-on-surface: 0,0,0;
+      --v-theme-on-primary: 255,255,255;
+      --v-theme-on-primary-darken-1: 255,255,255;
+      --v-theme-on-secondary: 255,255,255;
+      --v-theme-on-secondary-darken-1: 255,255,255;
+      --v-theme-on-error: 255,255,255;
+      --v-theme-on-info: 255,255,255;
+      --v-theme-on-success: 255,255,255;
+      --v-theme-on-warning: 255,255,255;
+      --v-theme-on-tertiary: 255,255,255;
+      --v-border-color: 0, 0, 0;
+      --v-border-opacity: 0.12;
+      --v-high-emphasis-opacity: 0.87;
+      --v-medium-emphasis-opacity: 0.6;
+      --v-disabled-opacity: 0.38;
+      --v-idle-opacity: 0.04;
+      --v-hover-opacity: 0.04;
+      --v-focus-opacity: 0.12;
+      --v-selected-opacity: 0.08;
+      --v-activated-opacity: 0.12;
+      --v-pressed-opacity: 0.12;
+      --v-dragged-opacity: 0.08;
+      --v-theme-kbd: 33, 37, 41;
+      --v-theme-on-kbd: 255, 255, 255;
+      --v-theme-code: 245, 245, 245;
+      --v-theme-on-code: 0, 0, 0;
+    }
+    .v-theme--light {
+      color-scheme: normal;
+      --v-theme-background: 255,255,255;
+      --v-theme-background-overlay-multiplier: 1;
+      --v-theme-surface: 255,255,255;
+      --v-theme-surface-overlay-multiplier: 1;
+      --v-theme-surface-variant: 66,66,66;
+      --v-theme-surface-variant-overlay-multiplier: 2;
+      --v-theme-on-surface-variant: 238,238,238;
+      --v-theme-primary: 98,0,238;
+      --v-theme-primary-overlay-multiplier: 2;
+      --v-theme-primary-darken-1: 55,0,179;
+      --v-theme-primary-darken-1-overlay-multiplier: 2;
+      --v-theme-secondary: 3,218,198;
+      --v-theme-secondary-overlay-multiplier: 1;
+      --v-theme-secondary-darken-1: 1,135,134;
+      --v-theme-secondary-darken-1-overlay-multiplier: 1;
+      --v-theme-error: 176,0,32;
+      --v-theme-error-overlay-multiplier: 2;
+      --v-theme-info: 33,150,243;
+      --v-theme-info-overlay-multiplier: 1;
+      --v-theme-success: 76,175,80;
+      --v-theme-success-overlay-multiplier: 1;
+      --v-theme-warning: 251,140,0;
+      --v-theme-warning-overlay-multiplier: 1;
+      --v-theme-on-background: 0,0,0;
+      --v-theme-on-surface: 0,0,0;
+      --v-theme-on-primary: 255,255,255;
+      --v-theme-on-primary-darken-1: 255,255,255;
+      --v-theme-on-secondary: 0,0,0;
+      --v-theme-on-secondary-darken-1: 255,255,255;
+      --v-theme-on-error: 255,255,255;
+      --v-theme-on-info: 255,255,255;
+      --v-theme-on-success: 255,255,255;
+      --v-theme-on-warning: 255,255,255;
+      --v-border-color: 0, 0, 0;
+      --v-border-opacity: 0.12;
+      --v-high-emphasis-opacity: 0.87;
+      --v-medium-emphasis-opacity: 0.6;
+      --v-disabled-opacity: 0.38;
+      --v-idle-opacity: 0.04;
+      --v-hover-opacity: 0.04;
+      --v-focus-opacity: 0.12;
+      --v-selected-opacity: 0.08;
+      --v-activated-opacity: 0.12;
+      --v-pressed-opacity: 0.12;
+      --v-dragged-opacity: 0.08;
+      --v-theme-kbd: 33, 37, 41;
+      --v-theme-on-kbd: 255, 255, 255;
+      --v-theme-code: 245, 245, 245;
+      --v-theme-on-code: 0, 0, 0;
+    }
+    .v-theme--dark {
+      color-scheme: dark;
+      --v-theme-background: 18,18,18;
+      --v-theme-background-overlay-multiplier: 1;
+      --v-theme-surface: 33,33,33;
+      --v-theme-surface-overlay-multiplier: 1;
+      --v-theme-surface-variant: 189,189,189;
+      --v-theme-surface-variant-overlay-multiplier: 2;
+      --v-theme-on-surface-variant: 66,66,66;
+      --v-theme-primary: 187,134,252;
+      --v-theme-primary-overlay-multiplier: 2;
+      --v-theme-primary-darken-1: 55,0,179;
+      --v-theme-primary-darken-1-overlay-multiplier: 1;
+      --v-theme-secondary: 3,218,197;
+      --v-theme-secondary-overlay-multiplier: 2;
+      --v-theme-secondary-darken-1: 3,218,197;
+      --v-theme-secondary-darken-1-overlay-multiplier: 2;
+      --v-theme-error: 207,102,121;
+      --v-theme-error-overlay-multiplier: 2;
+      --v-theme-info: 33,150,243;
+      --v-theme-info-overlay-multiplier: 2;
+      --v-theme-success: 76,175,80;
+      --v-theme-success-overlay-multiplier: 2;
+      --v-theme-warning: 251,140,0;
+      --v-theme-warning-overlay-multiplier: 2;
+      --v-theme-on-background: 255,255,255;
+      --v-theme-on-surface: 255,255,255;
+      --v-theme-on-primary: 255,255,255;
+      --v-theme-on-primary-darken-1: 255,255,255;
+      --v-theme-on-secondary: 0,0,0;
+      --v-theme-on-secondary-darken-1: 0,0,0;
+      --v-theme-on-error: 255,255,255;
+      --v-theme-on-info: 255,255,255;
+      --v-theme-on-success: 255,255,255;
+      --v-theme-on-warning: 255,255,255;
+      --v-border-color: 255, 255, 255;
+      --v-border-opacity: 0.12;
+      --v-high-emphasis-opacity: 0.87;
+      --v-medium-emphasis-opacity: 0.6;
+      --v-disabled-opacity: 0.38;
+      --v-idle-opacity: 0.1;
+      --v-hover-opacity: 0.04;
+      --v-focus-opacity: 0.12;
+      --v-selected-opacity: 0.08;
+      --v-activated-opacity: 0.12;
+      --v-pressed-opacity: 0.16;
+      --v-dragged-opacity: 0.08;
+      --v-theme-kbd: 33, 37, 41;
+      --v-theme-on-kbd: 255, 255, 255;
+      --v-theme-code: 52, 52, 52;
+      --v-theme-on-code: 204, 204, 204;
+    }
+    .v-theme--customTheme {
+      color-scheme: normal;
+      --v-theme-background: 255,255,255;
+      --v-theme-background-overlay-multiplier: 1;
+      --v-theme-surface: 255,255,255;
+      --v-theme-surface-overlay-multiplier: 1;
+      --v-theme-surface-variant: 66,66,66;
+      --v-theme-surface-variant-overlay-multiplier: 2;
+      --v-theme-on-surface-variant: 238,238,238;
+      --v-theme-primary: 0,91,144;
+      --v-theme-primary-overlay-multiplier: 2;
+      --v-theme-primary-darken-1: 55,0,179;
+      --v-theme-primary-darken-1-overlay-multiplier: 2;
+      --v-theme-secondary: 112,173,204;
+      --v-theme-secondary-overlay-multiplier: 1;
+      --v-theme-secondary-darken-1: 1,135,134;
+      --v-theme-secondary-darken-1-overlay-multiplier: 1;
+      --v-theme-error: 176,0,32;
+      --v-theme-error-overlay-multiplier: 2;
+      --v-theme-info: 33,150,243;
+      --v-theme-info-overlay-multiplier: 1;
+      --v-theme-success: 76,175,80;
+      --v-theme-success-overlay-multiplier: 1;
+      --v-theme-warning: 251,140,0;
+      --v-theme-warning-overlay-multiplier: 1;
+      --v-theme-tertiary: 95,95,95;
+      --v-theme-tertiary-overlay-multiplier: 2;
+      --v-theme-on-background: 0,0,0;
+      --v-theme-on-surface: 0,0,0;
+      --v-theme-on-primary: 255,255,255;
+      --v-theme-on-primary-darken-1: 255,255,255;
+      --v-theme-on-secondary: 255,255,255;
+      --v-theme-on-secondary-darken-1: 255,255,255;
+      --v-theme-on-error: 255,255,255;
+      --v-theme-on-info: 255,255,255;
+      --v-theme-on-success: 255,255,255;
+      --v-theme-on-warning: 255,255,255;
+      --v-theme-on-tertiary: 255,255,255;
+      --v-border-color: 0, 0, 0;
+      --v-border-opacity: 0.12;
+      --v-high-emphasis-opacity: 0.87;
+      --v-medium-emphasis-opacity: 0.6;
+      --v-disabled-opacity: 0.38;
+      --v-idle-opacity: 0.04;
+      --v-hover-opacity: 0.04;
+      --v-focus-opacity: 0.12;
+      --v-selected-opacity: 0.08;
+      --v-activated-opacity: 0.12;
+      --v-pressed-opacity: 0.12;
+      --v-dragged-opacity: 0.08;
+      --v-theme-kbd: 33, 37, 41;
+      --v-theme-on-kbd: 255, 255, 255;
+      --v-theme-code: 245, 245, 245;
+      --v-theme-on-code: 0, 0, 0;
+    }
+    .bg-background {
+      --v-theme-overlay-multiplier: var(--v-theme-background-overlay-multiplier);
+      background: rgb(var(--v-theme-background)) !important;
+      color: rgb(var(--v-theme-on-background)) !important;
+    }
+    .bg-surface {
+      --v-theme-overlay-multiplier: var(--v-theme-surface-overlay-multiplier);
+      background: rgb(var(--v-theme-surface)) !important;
+      color: rgb(var(--v-theme-on-surface)) !important;
+    }
+    .bg-surface-variant {
+      --v-theme-overlay-multiplier: var(--v-theme-surface-variant-overlay-multiplier);
+      background: rgb(var(--v-theme-surface-variant)) !important;
+      color: rgb(var(--v-theme-on-surface-variant)) !important;
+    }
+    .bg-primary {
+      --v-theme-overlay-multiplier: var(--v-theme-primary-overlay-multiplier);
+      background: rgb(var(--v-theme-primary)) !important;
+      color: rgb(var(--v-theme-on-primary)) !important;
+    }
+    .bg-primary-darken-1 {
+      --v-theme-overlay-multiplier: var(--v-theme-primary-darken-1-overlay-multiplier);
+      background: rgb(var(--v-theme-primary-darken-1)) !important;
+      color: rgb(var(--v-theme-on-primary-darken-1)) !important;
+    }
+    .bg-secondary {
+      --v-theme-overlay-multiplier: var(--v-theme-secondary-overlay-multiplier);
+      background: rgb(var(--v-theme-secondary)) !important;
+      color: rgb(var(--v-theme-on-secondary)) !important;
+    }
+    .bg-secondary-darken-1 {
+      --v-theme-overlay-multiplier: var(--v-theme-secondary-darken-1-overlay-multiplier);
+      background: rgb(var(--v-theme-secondary-darken-1)) !important;
+      color: rgb(var(--v-theme-on-secondary-darken-1)) !important;
+    }
+    .bg-error {
+      --v-theme-overlay-multiplier: var(--v-theme-error-overlay-multiplier);
+      background: rgb(var(--v-theme-error)) !important;
+      color: rgb(var(--v-theme-on-error)) !important;
+    }
+    .bg-info {
+      --v-theme-overlay-multiplier: var(--v-theme-info-overlay-multiplier);
+      background: rgb(var(--v-theme-info)) !important;
+      color: rgb(var(--v-theme-on-info)) !important;
+    }
+    .bg-success {
+      --v-theme-overlay-multiplier: var(--v-theme-success-overlay-multiplier);
+      background: rgb(var(--v-theme-success)) !important;
+      color: rgb(var(--v-theme-on-success)) !important;
+    }
+    .bg-warning {
+      --v-theme-overlay-multiplier: var(--v-theme-warning-overlay-multiplier);
+      background: rgb(var(--v-theme-warning)) !important;
+      color: rgb(var(--v-theme-on-warning)) !important;
+    }
+    .bg-tertiary {
+      --v-theme-overlay-multiplier: var(--v-theme-tertiary-overlay-multiplier);
+      background: rgb(var(--v-theme-tertiary)) !important;
+      color: rgb(var(--v-theme-on-tertiary)) !important;
+    }
+    .text-background {
+      color: rgb(var(--v-theme-background)) !important;
+    }
+    .border-background {
+      --v-border-color: var(--v-theme-background);
+    }
+    .text-surface {
+      color: rgb(var(--v-theme-surface)) !important;
+    }
+    .border-surface {
+      --v-border-color: var(--v-theme-surface);
+    }
+    .text-surface-variant {
+      color: rgb(var(--v-theme-surface-variant)) !important;
+    }
+    .border-surface-variant {
+      --v-border-color: var(--v-theme-surface-variant);
+    }
+    .on-surface-variant {
+      color: rgb(var(--v-theme-on-surface-variant)) !important;
+    }
+    .text-primary {
+      color: rgb(var(--v-theme-primary)) !important;
+    }
+    .border-primary {
+      --v-border-color: var(--v-theme-primary);
+    }
+    .text-primary-darken-1 {
+      color: rgb(var(--v-theme-primary-darken-1)) !important;
+    }
+    .border-primary-darken-1 {
+      --v-border-color: var(--v-theme-primary-darken-1);
+    }
+    .text-secondary {
+      color: rgb(var(--v-theme-secondary)) !important;
+    }
+    .border-secondary {
+      --v-border-color: var(--v-theme-secondary);
+    }
+    .text-secondary-darken-1 {
+      color: rgb(var(--v-theme-secondary-darken-1)) !important;
+    }
+    .border-secondary-darken-1 {
+      --v-border-color: var(--v-theme-secondary-darken-1);
+    }
+    .text-error {
+      color: rgb(var(--v-theme-error)) !important;
+    }
+    .border-error {
+      --v-border-color: var(--v-theme-error);
+    }
+    .text-info {
+      color: rgb(var(--v-theme-info)) !important;
+    }
+    .border-info {
+      --v-border-color: var(--v-theme-info);
+    }
+    .text-success {
+      color: rgb(var(--v-theme-success)) !important;
+    }
+    .border-success {
+      --v-border-color: var(--v-theme-success);
+    }
+    .text-warning {
+      color: rgb(var(--v-theme-warning)) !important;
+    }
+    .border-warning {
+      --v-border-color: var(--v-theme-warning);
+    }
+    .on-background {
+      color: rgb(var(--v-theme-on-background)) !important;
+    }
+    .on-surface {
+      color: rgb(var(--v-theme-on-surface)) !important;
+    }
+    .on-primary {
+      color: rgb(var(--v-theme-on-primary)) !important;
+    }
+    .on-primary-darken-1 {
+      color: rgb(var(--v-theme-on-primary-darken-1)) !important;
+    }
+    .on-secondary {
+      color: rgb(var(--v-theme-on-secondary)) !important;
+    }
+    .on-secondary-darken-1 {
+      color: rgb(var(--v-theme-on-secondary-darken-1)) !important;
+    }
+    .on-error {
+      color: rgb(var(--v-theme-on-error)) !important;
+    }
+    .on-info {
+      color: rgb(var(--v-theme-on-info)) !important;
+    }
+    .on-success {
+      color: rgb(var(--v-theme-on-success)) !important;
+    }
+    .on-warning {
+      color: rgb(var(--v-theme-on-warning)) !important;
+    }
+    .text-tertiary {
+      color: rgb(var(--v-theme-tertiary)) !important;
+    }
+    .border-tertiary {
+      --v-border-color: var(--v-theme-tertiary);
+    }
+    .on-tertiary {
+      color: rgb(var(--v-theme-on-tertiary)) !important;
+    }
+</style>
+<meta name="Travel Show Marketing Group" content="#1 producer of travel industry events"><link rel="modulepreload" href="/why/_payload.js"><link rel="modulepreload" as="script" crossorigin href="/_nuxt/entry.cf4b33a3.js"><link rel="preload" as="style" href="/_nuxt/entry.ac82efd8.css"><link rel="modulepreload" as="script" crossorigin href="/_nuxt/default.d789bca1.js"><link rel="preload" as="style" href="/_nuxt/default.cdc847a9.css"><link rel="modulepreload" as="script" crossorigin href="/_nuxt/nuxt-link.dc40e666.js"><link rel="modulepreload" as="script" crossorigin href="/_nuxt/_plugin-vue_export-helper.c27b6911.js"><link rel="modulepreload" as="script" crossorigin href="/_nuxt/why.7cd67140.js"><link rel="modulepreload" as="script" crossorigin href="/_nuxt/PageHeader.vue.42b024bf.js"><link rel="modulepreload" as="script" crossorigin href="/_nuxt/ImageCarousel.vue.41aaa427.js"><link rel="modulepreload" as="script" crossorigin href="/_nuxt/UpcomingEventsCarousel.vue.44f01ab4.js"><link rel="prefetch" as="script" crossorigin href="/_nuxt/error-component.59a597e2.js"><link rel="stylesheet" href="/_nuxt/entry.ac82efd8.css"><link rel="stylesheet" href="/_nuxt/default.cdc847a9.css"><style>.v-app-bar-title[data-v-8efc563a]{transition:.6s}.expand[data-v-8efc563a]{height:80px!important;padding-top:10px}</style><style>.v-card[data-v-acf461ea]{width:100%}</style></head>
+<body ><div id="__nuxt"><!--[--><div class="v-application v-theme--customTheme v-layout v-layout--full-height v-locale--is-ltr" style="z-index:1000;" app><div class="v-application__wrap"><!--[--><div data-v-8efc563a><!--[--><nav class="v-navigation-drawer v-navigation-drawer--left v-navigation-drawer--temporary v-theme--customTheme" style="left:0;z-index:1004;transform:translateX(-110%);position:fixed;transition:none !important;" app dark src="/img/bgDrawer.jpg"><!----><!----><div class="v-navigation-drawer__content"><!--[--><hr class="v-divider v-theme--customTheme" style="" aria-orientation="horizontal" role="separator" data-v-8efc563a><div class="v-responsive v-img v-img--booting" style="max-width:276px;" data-v-8efc563a><div class="v-responsive__sizer" style=""></div><!--[--><!--[--><!----><!----><!----><!----><!----><!--]--><!--]--><!----></div><div class="v-list v-theme--customTheme bg-transparent v-list--density-default v-list--one-line" style="" role="listbox" dense data-v-8efc563a><!--[--><!--[--><div class="v-list-item v-list-item--link v-theme--customTheme v-list-item--density-default v-list-item--one-line v-list-item--variant-text" style="" tabindex="0" data-v-8efc563a><!--[--><span class="v-list-item__overlay"></span><span class="v-list-item__underlay"></span><!--]--><!----><div class="v-list-item__content" data-no-activator><!----><!----><!--[--><a href="/events" class="" data-v-8efc563a><button type="button" class="v-btn v-btn--flat v-theme--customTheme v-btn--density-default v-btn--size-default v-btn--variant-elevated" style="" data-v-8efc563a><!--[--><span class="v-btn__overlay"></span><span class="v-btn__underlay"></span><!--]--><!----><span class="v-btn__content" data-no-activator><!--[--><span class="mr-2" data-v-8efc563a>Events</span><!--]--></span><!----><!----></button></a><!----><!--]--></div><!----></div><div class="v-list-item v-list-item--link v-theme--customTheme v-list-item--density-default v-list-item--one-line v-list-item--variant-text" style="" tabindex="0" data-v-8efc563a><!--[--><span class="v-list-item__overlay"></span><span class="v-list-item__underlay"></span><!--]--><!----><div class="v-list-item__content" data-no-activator><!----><!----><!--[--><a aria-current="page" href="/why" class="router-link-active router-link-exact-active" data-v-8efc563a><button type="button" class="v-btn v-btn--flat v-theme--customTheme v-btn--density-default v-btn--size-default v-btn--variant-elevated" style="" data-v-8efc563a><!--[--><span class="v-btn__overlay"></span><span class="v-btn__underlay"></span><!--]--><!----><span class="v-btn__content" data-no-activator><!--[--><span class="mr-2" data-v-8efc563a>Why TravelSMG</span><!--]--></span><!----><!----></button></a><!--[--><div class="v-list-item v-theme--customTheme v-list-item--density-default v-list-item--one-line v-list-item--variant-text" style="" data-v-8efc563a><!--[--><!----><span class="v-list-item__underlay"></span><!--]--><!----><div class="v-list-item__content" data-no-activator><!----><!----><!--[--><a href="/press" class="pl-2" data-v-8efc563a><button type="button" class="v-btn v-btn--flat v-theme--customTheme v-btn--density-default v-btn--size-default v-btn--variant-elevated" style="" data-v-8efc563a><!--[--><span class="v-btn__overlay"></span><span class="v-btn__underlay"></span><!--]--><!----><span class="v-btn__content" data-no-activator><!--[--><span class="mr-2" data-v-8efc563a>Press/Blog</span><!--]--></span><!----><!----></button></a><!--]--></div><!----></div><!--]--><!--]--></div><!----></div><div class="v-list-item v-list-item--link v-theme--customTheme v-list-item--density-default v-list-item--one-line v-list-item--variant-text" style="" tabindex="0" data-v-8efc563a><!--[--><span class="v-list-item__overlay"></span><span class="v-list-item__underlay"></span><!--]--><!----><div class="v-list-item__content" data-no-activator><!----><!----><!--[--><a href="/about" class="" data-v-8efc563a><button type="button" class="v-btn v-btn--flat v-theme--customTheme v-btn--density-default v-btn--size-default v-btn--variant-elevated" style="" data-v-8efc563a><!--[--><span class="v-btn__overlay"></span><span class="v-btn__underlay"></span><!--]--><!----><span class="v-btn__content" data-no-activator><!--[--><span class="mr-2" data-v-8efc563a>About</span><!--]--></span><!----><!----></button></a><!----><!--]--></div><!----></div><!--]--><!--]--></div><!--]--></div><!----></nav><!----><!--]--><header class="v-toolbar v-toolbar--density-default v-theme--customTheme v-app-bar px-15" style="background-color:#ffffff;top:0;z-index:1006;transform:translateY(0%);position:fixed;transition:none !important;" app data-v-8efc563a><!----><!--[--><div class="v-toolbar__content" style="height:64px;"><!----><!----><!--[--><button type="button" class="v-btn v-btn--icon v-theme--customTheme v-btn--density-default v-btn--size-default v-btn--variant-text v-app-bar-nav-icon d-flex d-sm-none" style="" data-v-8efc563a><!--[--><span class="v-btn__overlay"></span><span class="v-btn__underlay"></span><!--]--><!----><span class="v-btn__content" data-no-activator><i class="mdi-menu mdi v-icon notranslate v-theme--customTheme v-icon--size-default" style="" aria-hidden="true"></i></span><!----><!----></button><div class="v-toolbar-title v-app-bar-title" data-v-8efc563a><div class="v-toolbar-title__placeholder"><!----><!--[--><div class="v-responsive v-img v-img--booting" style="max-width:276px;" data-v-8efc563a><div class="v-responsive__sizer" style=""></div><!--[--><!--[--><!----><!----><!----><!----><!----><!--]--><!--]--><!----></div><!--]--></div></div><div class="flex-grow-1" data-v-8efc563a></div><div class="d-none d-sm-flex" data-v-8efc563a><!--[--><div data-v-8efc563a><a href="/events" class="" data-v-8efc563a><button type="button" class="v-btn v-btn--flat v-theme--customTheme text-primary v-btn--density-default v-btn--size-default v-btn--variant-text" style="" data-v-8efc563a><!--[--><span class="v-btn__overlay"></span><span class="v-btn__underlay"></span><!--]--><!----><span class="v-btn__content" data-no-activator><!--[--><span class="mr-2" data-v-8efc563a>Events</span><!--]--></span><!----><!----></button></a></div><div data-v-8efc563a><!--[--><!--[--><a aria-current="page" href="/why" class="router-link-active router-link-exact-active" data-v-8efc563a><button type="button" class="v-btn v-theme--customTheme text-primary v-btn--density-default v-btn--size-default v-btn--variant-text" style="" aria-haspopup="menu" aria-expanded="false" aria-owns="v-menu-12" text data-v-8efc563a><!--[--><span class="v-btn__overlay"></span><span class="v-btn__underlay"></span><!--]--><!----><span class="v-btn__content" data-no-activator><!--[--><span class="mr-2" data-v-8efc563a>Why TravelSMG</span><!--]--></span><!----><!----></button></a><!--]--><!----><!--]--></div><div data-v-8efc563a><a href="/about" class="" data-v-8efc563a><button type="button" class="v-btn v-btn--flat v-theme--customTheme text-primary v-btn--density-default v-btn--size-default v-btn--variant-text" style="" data-v-8efc563a><!--[--><span class="v-btn__overlay"></span><span class="v-btn__underlay"></span><!--]--><!----><span class="v-btn__content" data-no-activator><!--[--><span class="mr-2" data-v-8efc563a>About</span><!--]--></span><!----><!----></button></a></div><!--]--></div><!--]--><!----></div><!--]--><!--[--><!----><!--]--></header></div><div class="d-flex flex-column justify-center align-center"><!--[--><!--[--><div class="v-container mt-10" no-gutters><div class="v-container mt-10 mb-5" align="center"><h2>Why TravelSMG</h2><p>TravelSMG is the most trusted partner in bringing Suppliers and Travel 
+        Agents face-to-face. With a proven track record in producing effective trade 
+        shows and events, we&#39;ve attracted the biggest names in leisure travel. Our 
+        diverse portfolio caters to the travel professional community by tuning into the
+        pulse of the industry</p></div><!--[--><!--[--><div class="v-row v-row--no-gutters" cols="2"><div class="v-col" align="center"><div class="v-window v-theme--customTheme v-carousel" style="height:300px;"><div class="v-window__container" style=""><!--[--><!--[--><div class="v-window-item v-carousel-item" style="display:none;"><!----></div><div class="v-window-item v-carousel-item" style="display:none;"><!----></div><!--]--><!--]--><!----></div><!--[--><!--[--><!----><!----><!--]--><!--]--></div></div><div class="v-col bg-secondary" align="center"><div class="v-container mt-10 mb-5" align="center"><h2>EDUCATIONAL OPPORTUNITIES</h2><p>We are dedicated to supporting the needs of today&#39;s Travel Agents, and 
+                        know that education is key to a profitable career in the industry. 
+                        Each Forum provides agents with training from industry experts - 
+                        covering the most relevant topics and advice to succeed.</p></div></div></div><!--]--><!--[--><div class="v-row v-row--no-gutters"><div class="v-col bg-primary" align="center"><div class="v-container mt-10 mb-5" align="center"><h2>TOOLS TO SUCCEED</h2><p>From branding and marketing strategies to destinations and technology
+                        training, our full suite of events aims to help every Travel Agent 
+                        and each stage of their career. Our large scale trade shows offers a 
+                        little bit of everything. Our niche events for Specialists and Agency 
+                        Owners streamline the way today’s Travel Agents can learn in one 
+                        comprehensive 3-day event.</p></div></div><div class="v-col"><div class="v-window v-theme--customTheme v-carousel" style="height:300px;"><div class="v-window__container" style=""><!--[--><!--[--><div class="v-window-item v-carousel-item" style="display:none;"><!----></div><div class="v-window-item v-carousel-item" style="display:none;"><!----></div><div class="v-window-item v-carousel-item" style="display:none;"><!----></div><!--]--><!--]--><!----></div><!--[--><!--[--><!----><!----><!--]--><!--]--></div></div></div><!--]--><!--[--><div class="v-row v-row--no-gutters" cols="2"><div class="v-col" align="center"><div class="v-window v-theme--customTheme v-carousel" style="height:300px;"><div class="v-window__container" style=""><!--[--><!--[--><div class="v-window-item v-carousel-item" style="display:none;"><!----></div><div class="v-window-item v-carousel-item" style="display:none;"><!----></div><div class="v-window-item v-carousel-item" style="display:none;"><!----></div><!--]--><!--]--><!----></div><!--[--><!--[--><!----><!----><!--]--><!--]--></div></div><div class="v-col bg-secondary" align="center"><div class="v-container mt-10 mb-5" align="center"><h2>SUPPLIER ENGAGEMENT</h2><p>From branding and marketing strategies to destinations and technology
+                        training, our full suite of events aims to help every Travel Agent 
+                        and each stage of their career. Our large scale trade shows offers a 
+                        little bit of everything. Our niche events for Specialists and Agency 
+                        Owners streamline the way today&#39;s Travel Agents can learn in one 
+                        comprehensive 3-day event.</p></div></div></div><!--]--><!--[--><div class="v-row v-row--no-gutters"><div class="v-col bg-primary" align="center"><div class="v-container mt-10 mb-5" align="center"><h2>PRODUCT &amp; DESTINATION TRAINING</h2><p>From branding and marketing strategies to destinations and technology
+                        training, our full suite of events aims to help every Travel Agent 
+                        and each stage of their career. Our large scale trade shows offers a 
+                        little bit of everything. Our niche events for Specialists and Agency 
+                        Owners streamline the way today&#39;s Travel Agents can learn in one 
+                        comprehensive 3-day event.</p></div></div><div class="v-col"><div class="v-window v-theme--customTheme v-carousel" style="height:300px;"><div class="v-window__container" style=""><!--[--><!--[--><div class="v-window-item v-carousel-item" style="display:none;"><!----></div><div class="v-window-item v-carousel-item" style="display:none;"><!----></div><div class="v-window-item v-carousel-item" style="display:none;"><!----></div><!--]--><!--]--><!----></div><!--[--><!--[--><!----><!----><!--]--><!--]--></div></div></div><!--]--><!--]--></div><div class="v-container"><div class="v-row v-row--no-gutters" cols="2"><div class="v-col align-self-center" max-width="150px"><h2>Current Event Schedule</h2><div class="v-sheet v-theme--customTheme ma-2 pa-2 text-h6" style=""><div class="d-flex align-center py-4 px-10"><div class="v-responsive v-img v-img--booting mr-10" style="max-width:50px;width:50px;"><div class="v-responsive__sizer" style=""></div><!--[--><!--[--><!----><!----><!----><!----><!----><!--]--><!--]--><!----></div><div class="v-responsive v-img v-img--booting" style="max-width:50px;width:50px;"><div class="v-responsive__sizer" style=""></div><!--[--><!--[--><!----><!----><!----><!----><!----><!--]--><!--]--><!----></div></div></div></div><div class="v-col" align="left"><div class="v-window v-theme--customTheme v-carousel" style="height:300px;"><div class="v-window__container" style=""><!--[--><!--[--><!--[--><div class="v-window-item v-window-item--active v-carousel-item"><!--[--><div class="v-responsive v-img v-img--booting" style=""><div class="v-responsive__sizer" style=""></div><!--[--><!--[--><!----><!----><!----><!----><!----><!--]--><!--]--><div class="v-responsive__content"><!--[--><div class="v-row flex-nowrap"><!--[--><!--[--><div class="v-col"><div class="v-sheet v-theme--customTheme" style=""><div class="v-card v-theme--customTheme v-card--density-default v-card--variant-elevated mx-auto" style="width:250px;"><!----><div class="v-card__loader"><div class="v-progress-linear v-theme--customTheme" style="top:0;height:0;--v-progress-linear-height:2px;left:50%;transform:translateX(-50%);" role="progressbar" aria-hidden="true" aria-valuemin="0" aria-valuemax="100"><!----><div class="v-progress-linear__background" style="width:100%;"></div><div class="v-progress-linear__indeterminate"><!--[--><div class="v-progress-linear__indeterminate long" style=""></div><div class="v-progress-linear__indeterminate short" style=""></div><!--]--></div><!----></div></div><!----><!----><!--[--><div class="v-responsive v-img v-img--booting" style=""><div class="v-responsive__sizer" style=""></div><!--[--><!--[--><!----><!----><!----><!----><!----><!--]--><!--]--><!----></div><div class="v-card-title">Las Vegas Travel Agent Forum</div><div class="v-card-subtitle">March 24 - 27, 2024<br> Paris Las Vegas Hotel Casino &amp; Resort<br> Las Vegas, Nevada</div><div class="v-card-actions"><!--[--><button type="button" class="v-btn v-theme--customTheme text-secondary v-btn--density-default v-btn--size-default v-btn--variant-text" style=""><!--[--><span class="v-btn__overlay"></span><span class="v-btn__underlay"></span><!--]--><!----><span class="v-btn__content" data-no-activator><!--[--> Explore More <!--]--></span><!----><!----></button><!--]--></div><div style="display:none;"><hr class="v-divider v-theme--customTheme" style="" aria-orientation="horizontal" role="separator"><div class="v-card-text"> I&#39;m a thing. But, like most politicians, he promised more than he could deliver. You won&#39;t have time for sleeping, soldier, not with all the bed making you&#39;ll be doing. Then we&#39;ll go with that data file! Hey, you add a one and two zeros to that or we walk! You&#39;re going to do his laundry? I&#39;ve got to find a way to escape. </div></div><!--]--><!----><!--[--><!----><span class="v-card__underlay"></span><!--]--></div></div></div><!--]--><!--[--><div class="v-col"><div class="v-sheet v-theme--customTheme" style=""><div class="v-card v-theme--customTheme v-card--density-default v-card--variant-elevated mx-auto" style="width:250px;"><!----><div class="v-card__loader"><div class="v-progress-linear v-theme--customTheme" style="top:0;height:0;--v-progress-linear-height:2px;left:50%;transform:translateX(-50%);" role="progressbar" aria-hidden="true" aria-valuemin="0" aria-valuemax="100"><!----><div class="v-progress-linear__background" style="width:100%;"></div><div class="v-progress-linear__indeterminate"><!--[--><div class="v-progress-linear__indeterminate long" style=""></div><div class="v-progress-linear__indeterminate short" style=""></div><!--]--></div><!----></div></div><!----><!----><!--[--><div class="v-responsive v-img v-img--booting" style=""><div class="v-responsive__sizer" style=""></div><!--[--><!--[--><!----><!----><!----><!----><!----><!--]--><!--]--><!----></div><div class="v-card-title">Romance Travel Forum</div><div class="v-card-subtitle">May 6th - 9th, 2024<br> Secrets Playa Blanca<br> Costa Mujeres, Mexico</div><div class="v-card-actions"><!--[--><button type="button" class="v-btn v-theme--customTheme text-secondary v-btn--density-default v-btn--size-default v-btn--variant-text" style=""><!--[--><span class="v-btn__overlay"></span><span class="v-btn__underlay"></span><!--]--><!----><span class="v-btn__content" data-no-activator><!--[--> Explore More <!--]--></span><!----><!----></button><!--]--></div><div style="display:none;"><hr class="v-divider v-theme--customTheme" style="" aria-orientation="horizontal" role="separator"><div class="v-card-text"> I&#39;m a thing. But, like most politicians, he promised more than he could deliver. You won&#39;t have time for sleeping, soldier, not with all the bed making you&#39;ll be doing. Then we&#39;ll go with that data file! Hey, you add a one and two zeros to that or we walk! You&#39;re going to do his laundry? I&#39;ve got to find a way to escape. </div></div><!--]--><!----><!--[--><!----><span class="v-card__underlay"></span><!--]--></div></div></div><!--]--><!--]--></div><!--]--></div></div><!--]--></div><!--]--><!--[--><!----><!--]--><!--[--><div class="v-window-item v-carousel-item" style="display:none;"><!----></div><!--]--><!--[--><!----><!--]--><!--[--><div class="v-window-item v-carousel-item" style="display:none;"><!----></div><!--]--><!--[--><!----><!--]--><!--]--><!--]--><!----></div><!--[--><!--[--><!----><!----><!--]--><!--]--></div></div></div></div><!--]--><!--]--></div><footer class="v-footer v-theme--customTheme" style="background-color:#ffffff;" padless data-v-acf461ea><div class="v-card v-card--flat v-theme--customTheme v-card--density-default v-card--variant-elevated secondary text-center" style="background-color:#ffffff;" tile data-v-acf461ea><!----><div class="v-card__loader"><div class="v-progress-linear v-theme--customTheme" style="top:0;height:0;--v-progress-linear-height:2px;left:50%;transform:translateX(-50%);" role="progressbar" aria-hidden="true" aria-valuemin="0" aria-valuemax="100"><!----><div class="v-progress-linear__background" style="width:100%;"></div><div class="v-progress-linear__indeterminate"><!--[--><div class="v-progress-linear__indeterminate long" style=""></div><div class="v-progress-linear__indeterminate short" style=""></div><!--]--></div><!----></div></div><!----><!----><!--[--><div class="v-card-text" data-v-acf461ea><div align="center" class="ma-0 pa-0 my-0 py-0" data-v-acf461ea><div class="v-responsive v-img v-img--booting ma-5" style="width:276px;" data-v-acf461ea><div class="v-responsive__sizer" style=""></div><!--[--><!--[--><!----><!----><!----><!----><!----><!--]--><!--]--><!----></div><br data-v-acf461ea></div><!--[--><a class="v-btn v-theme--customTheme v-btn--density-default v-btn--size-large v-btn--variant-plain mx-3" style="" href="https://facebook.com" target="_blank" data-v-acf461ea><!--[--><span class="v-btn__overlay"></span><span class="v-btn__underlay"></span><!--]--><!----><span class="v-btn__content" data-no-activator><!--[--><i class="mdi-facebook mdi v-icon notranslate v-theme--customTheme v-icon--size-large text-primary" style="" aria-hidden="true" data-v-acf461ea></i><!--]--></span><!----><!----></a><a class="v-btn v-theme--customTheme v-btn--density-default v-btn--size-large v-btn--variant-plain mx-3" style="" href="https://instagram.com" target="_blank" data-v-acf461ea><!--[--><span class="v-btn__overlay"></span><span class="v-btn__underlay"></span><!--]--><!----><span class="v-btn__content" data-no-activator><!--[--><i class="mdi-instagram mdi v-icon notranslate v-theme--customTheme v-icon--size-large text-primary" style="" aria-hidden="true" data-v-acf461ea></i><!--]--></span><!----><!----></a><a class="v-btn v-theme--customTheme v-btn--density-default v-btn--size-large v-btn--variant-plain mx-3" style="" href="https://linkedin.com" target="_blank" data-v-acf461ea><!--[--><span class="v-btn__overlay"></span><span class="v-btn__underlay"></span><!--]--><!----><span class="v-btn__content" data-no-activator><!--[--><i class="mdi-linkedin mdi v-icon notranslate v-theme--customTheme v-icon--size-large text-primary" style="" aria-hidden="true" data-v-acf461ea></i><!--]--></span><!----><!----></a><a class="v-btn v-theme--customTheme v-btn--density-default v-btn--size-large v-btn--variant-plain mx-3" style="" href="https://youtube.com" target="_blank" data-v-acf461ea><!--[--><span class="v-btn__overlay"></span><span class="v-btn__underlay"></span><!--]--><!----><span class="v-btn__content" data-no-activator><!--[--><i class="mdi-youtube mdi v-icon notranslate v-theme--customTheme v-icon--size-large text-primary" style="" aria-hidden="true" data-v-acf461ea></i><!--]--></span><!----><!----></a><!--]--></div><div class="v-card-text text-white pt-0" data-v-acf461ea><a href="/events" class="" data-v-acf461ea><button type="button" class="v-btn v-btn--elevated v-theme--customTheme bg-transparent v-btn--density-default elevation-0 v-btn--size-default v-btn--variant-elevated" style="" text data-v-acf461ea><!--[--><span class="v-btn__overlay"></span><span class="v-btn__underlay"></span><!--]--><!----><span class="v-btn__content" data-no-activator><!--[--><span class="mr-2 text-primary" data-v-acf461ea>Events</span><!--]--></span><!----><!----></button></a><a aria-current="page" href="/why" class="router-link-active router-link-exact-active" data-v-acf461ea><button type="button" class="v-btn v-btn--elevated v-theme--customTheme bg-transparent v-btn--density-default elevation-0 v-btn--size-default v-btn--variant-elevated" style="" text data-v-acf461ea><!--[--><span class="v-btn__overlay"></span><span class="v-btn__underlay"></span><!--]--><!----><span class="v-btn__content" data-no-activator><!--[--><span class="mr-2 text-primary" data-v-acf461ea>Why TravelSMG</span><!--]--></span><!----><!----></button></a><a href="/about" class="" data-v-acf461ea><button type="button" class="v-btn v-btn--elevated v-theme--customTheme bg-transparent v-btn--density-default elevation-0 v-btn--size-default v-btn--variant-elevated" style="" text data-v-acf461ea><!--[--><span class="v-btn__overlay"></span><span class="v-btn__underlay"></span><!--]--><!----><span class="v-btn__content" data-no-activator><!--[--><span class="mr-2 text-primary" data-v-acf461ea>About</span><!--]--></span><!----><!----></button></a></div><hr class="v-divider v-theme--customTheme" style="" aria-orientation="horizontal" role="separator" data-v-acf461ea><div class="v-card-text text-white" data-v-acf461ea>2024 — <strong data-v-acf461ea>Travel Show Marketing All Rights Reserved</strong></div><!--]--><!----><!--[--><!----><span class="v-card__underlay"></span><!--]--></div></footer><!--]--></div></div><!--]--></div><script type="module">import p from "/why/_payload.js";window.__NUXT__={...p,...((function(a){return {state:{},_errors:{},serverRendered:true,config:{public:{baseUrl:a},app:{baseURL:a,buildAssetsDir:"\u002F_nuxt\u002F",cdnURL:""}},pinia:{},prerenderedAt:1705471034173}}("\u002F")))}</script><script type="module" src="/_nuxt/entry.cf4b33a3.js" crossorigin></script></body>
+</html>

@@ -1,1 +1,1 @@
-export default {data:{s7VEhNqTvT:"Hello, from This Dot Labs!"},prerenderedAt:1705353559121}
+export default {data:{s7VEhNqTvT:"Hello, from This Dot Labs!"},prerenderedAt:1705471032262}

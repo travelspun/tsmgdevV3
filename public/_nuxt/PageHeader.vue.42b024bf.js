@@ -1,0 +1,1 @@
+import{a as o,r as c,o as r,c as s,w as l,e as t,t as n}from"./entry.cf4b33a3.js";const _=o({__name:"PageHeader",props:{content:{type:Object,required:!0}},setup(e){return(i,p)=>{const a=c("v-container");return r(),s(a,{class:"mt-10 mb-5",align:"center"},{default:l(()=>[t("h2",null,n(e.content.title),1),t("p",null,n(e.content.text),1)]),_:1})}}});export{_};
