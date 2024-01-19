@@ -1,0 +1,23 @@
+import{_ as w}from"./PageHeader.vue.hANAF34c.js";import{_ as O}from"./_plugin-vue_export-helper.x3n3nnut.js";import{r as e,o as a,g,w as s,F as u,b as t,t as p,a as r,i as k,c as v,f as A,h as m,u as S}from"./entry.mkRIDPev.js";import{u as E}from"./vue.f36acd1f.aGpKSVyL.js";const N={data:()=>({cards:[{title:"Great Stays",date:"Jul. 10, 2023",src:"https://cdn.vuetifyjs.com/images/cards/house.jpg",flex:6},{title:"Favorite road trips",date:"Oct. 19, 2023",src:"https://cdn.vuetifyjs.com/images/cards/road.jpg",flex:6},{title:"Best airlines",date:"Jan. 19, 2024",src:"https://cdn.vuetifyjs.com/images/cards/plane.jpg",flex:6}]})},G=r("br",null,null,-1),I={class:"primary"};function C(i,c,h,f,l,d){const o=e("v-img"),_=e("v-spacer"),y=e("v-card-text"),j=e("v-card"),T=e("v-col"),x=e("v-row"),b=e("v-container");return a(),g(b,{fluid:""},{default:s(()=>[t(x,null,{default:s(()=>[(a(!0),v(u,null,k(i.cards,n=>(a(),g(T,{key:n.title,cols:n.flex},{default:s(()=>[t(j,{class:"mx-10",flat:""},{default:s(()=>[t(o,{src:n.src,class:"align-end",gradient:"to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)",height:"200px",cover:""},null,8,["src"]),t(y,null,{default:s(()=>[t(_),r("span",null,[r("h3",null,p(n.title),1)]),G,r("span",I,p(n.date),1)]),_:2},1024)]),_:2},1024)]),_:2},1032,["cols"]))),128))]),_:1})]),_:1})}const F=O(N,[["render",C]]),M=A({__name:"press",setup(i){E({title:"Travel Show Marketing Group",meta:[{name:"Travel Show Marketing Group",content:"#1 producer of travel industry events"}]}),m([{body:{title:"EDUCATIONAL OPPORTUNITIES",text:`We are dedicated to supporting the needs of today's Travel Agents, and 
+                        know that education is key to a profitable career in the industry. 
+                        Each Forum provides agents with training from industry experts - 
+                        covering the most relevant topics and advice to succeed.`},images:["https://cdn.vuetifyjs.com/images/cards/docks.jpg","https://cdn.vuetifyjs.com/images/cards/hotel.jpg"]},{body:{title:"TOOLS TO SUCCEED",text:`From branding and marketing strategies to destinations and technology
+                        training, our full suite of events aims to help every Travel Agent 
+                        and each stage of their career. Our large scale trade shows offers a 
+                        little bit of everything. Our niche events for Specialists and Agency 
+                        Owners streamline the way today’s Travel Agents can learn in one 
+                        comprehensive 3-day event.`},images:["https://cdn.vuetifyjs.com/images/cards/sunshine.jpg","https://cdn.vuetifyjs.com/images/cards/hotel.jpg","https://cdn.vuetifyjs.com/images/cards/docks.jpg"]},{body:{title:"SUPPLIER ENGAGEMENT",text:`From branding and marketing strategies to destinations and technology
+                        training, our full suite of events aims to help every Travel Agent 
+                        and each stage of their career. Our large scale trade shows offers a 
+                        little bit of everything. Our niche events for Specialists and Agency 
+                        Owners streamline the way today's Travel Agents can learn in one 
+                        comprehensive 3-day event.`},images:["https://cdn.vuetifyjs.com/images/cards/hotel.jpg","https://cdn.vuetifyjs.com/images/cards/sunshine.jpg","https://cdn.vuetifyjs.com/images/cards/docks.jpg"]},{body:{title:"PRODUCT & DESTINATION TRAINING",text:`From branding and marketing strategies to destinations and technology
+                        training, our full suite of events aims to help every Travel Agent 
+                        and each stage of their career. Our large scale trade shows offers a 
+                        little bit of everything. Our niche events for Specialists and Agency 
+                        Owners streamline the way today's Travel Agents can learn in one 
+                        comprehensive 3-day event.`},images:["https://cdn.vuetifyjs.com/images/cards/hotel.jpg","https://cdn.vuetifyjs.com/images/cards/docks.jpg","https://cdn.vuetifyjs.com/images/cards/sunshine.jpg"]}]);const c=m({title:"Why TravelSMG",text:`TravelSMG is the most trusted partner in bringing Suppliers and Travel 
+        Agents face-to-face. With a proven track record in producing effective trade 
+        shows and events, we've attracted the biggest names in leisure travel. Our 
+        diverse portfolio caters to the travel professional community by tuning into the
+        pulse of the industry`});return(h,f)=>{const l=w,d=e("v-container"),o=F;return a(),v(u,null,[t(d,{"no-gutters":"",class:"mt-10"},{default:s(()=>[t(l,{content:S(c)},null,8,["content"])]),_:1}),t(o)],64)}}});export{M as default};
